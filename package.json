@@ -4,13 +4,13 @@
   "description": "Spend and budget widget for the DeepSeek Harness web GUI: live DeepSeek Platform balance, estimated spend, and a per-project token breakdown in the sidebar.",
   "license": "MIT",
   "author": "Niels Krikke",
-  "homepage": "https://github.com/nielskrikke/dsh-budget-reader#readme",
+  "homepage": "https://github.com/nielskrikke/dsh-cost-widget#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nielskrikke/dsh-budget-reader.git"
+    "url": "git+https://github.com/nielskrikke/dsh-cost-widget.git"
   },
   "bugs": {
-    "url": "https://github.com/nielskrikke/dsh-budget-reader/issues"
+    "url": "https://github.com/nielskrikke/dsh-cost-widget/issues"
   },
   "keywords": [
     "deepseek",

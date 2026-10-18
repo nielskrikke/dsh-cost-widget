@@ -1,8 +1,6 @@
-# dsh-budget-reader
+# dsh-cost-widget
 
 A spend / budget widget for the [DeepSeek Harness](https://github.com/deepseek-ai) web GUI. It adds a small meter to the bottom of the left sidebar with your DeepSeek Platform balance and estimated spend; click it for a per-project breakdown, the live account card, and the price table.
-
-> The repository is named `dsh-budget-reader`; the installable package inside is `dsh-cost-widget`. The package name is kept stable so existing installs keep working.
 
 ## What you get
 
@@ -25,7 +23,7 @@ Tested with DSH 0.2.x (CLI `0.2.0-rc.2`, desktop app `0.2.1-rc.2`) on macOS.
 ### Recommended: install as a DSH bundle
 
 ```sh
-dsh plugin --profile web add github:nielskrikke/dsh-budget-reader
+dsh plugin --profile web add github:nielskrikke/dsh-cost-widget
 ```
 
 This installs the package, adds it to the profile's bundle list, and activates the row from the package's own `cordis.patch.yml`. Restart the harness afterwards (`dsh web`, or quit and reopen the desktop app) so the client half is loaded in a fresh process.
@@ -33,8 +31,8 @@ This installs the package, adds it to the profile's bundle list, and activates t
 If you prefer to install from a local clone:
 
 ```sh
-git clone https://github.com/nielskrikke/dsh-budget-reader.git
-dsh plugin --profile web add ./dsh-budget-reader
+git clone https://github.com/nielskrikke/dsh-cost-widget.git
+dsh plugin --profile web add ./dsh-cost-widget
 ```
 
 ### Manual install
@@ -42,7 +40,7 @@ dsh plugin --profile web add ./dsh-budget-reader
 Use this when you do not want `dsh plugin` / pnpm to manage the package. The directory name must match the package name, `dsh-cost-widget`:
 
 ```sh
-git clone https://github.com/nielskrikke/dsh-budget-reader.git \
+git clone https://github.com/nielskrikke/dsh-cost-widget.git \
   "$HOME/.dsh/profiles/web/dsh-cost-widget"
 
 mkdir -p "$HOME/.dsh/profiles/web/node_modules"
