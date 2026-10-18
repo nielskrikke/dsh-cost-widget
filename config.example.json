@@ -1,0 +1,18 @@
+{
+  "defaultModel": "deepseek-v4-flash",
+  "prices": {
+    "deepseek-v4-flash": {
+      "input": 0.14,
+      "cacheRead": 0.0028,
+      "cacheWrite": 0,
+      "output": 0.28
+    },
+    "deepseek-v4-pro": {
+      "input": 0.435,
+      "cacheRead": 0.003625,
+      "cacheWrite": 0,
+      "output": 0.87
+    }
+  },
+  "internalCosts": false
+}

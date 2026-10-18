@@ -1,0 +1,58 @@
+{
+  "name": "dsh-cost-widget",
+  "version": "1.0.0",
+  "description": "Spend and budget widget for the DeepSeek Harness web GUI: live DeepSeek Platform balance, estimated spend, and a per-project token breakdown in the sidebar.",
+  "license": "MIT",
+  "author": "Niels Krikke",
+  "homepage": "https://github.com/nielskrikke/dsh-budget-reader#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nielskrikke/dsh-budget-reader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nielskrikke/dsh-budget-reader/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "budget",
+    "cost",
+    "spend",
+    "tokens"
+  ],
+  "icon": "./icon.svg",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "client.js",
+    "cordis.patch.yml",
+    "config.example.json",
+    "icon.svg",
+    "lib/",
+    "LICENSE",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}

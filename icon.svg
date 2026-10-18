@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Budget and spend widget">
+  <rect width="64" height="64" rx="14" fill="#0b1220"/>
+  <rect x="9" y="18" width="46" height="31" rx="7" fill="#16233a" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M9 26h46" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M17 41v4M22 37v8M27 33v12" stroke="#f59e0b" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="43" cy="37" r="6.5" fill="#22c55e"/>
+  <path d="M43 33.5v7M40.5 35.2h4M40.5 38.8h4" stroke="#052e16" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

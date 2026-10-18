@@ -1,0 +1,10 @@
+# Bundle patch for dsh-cost-widget.
+#
+# `dsh plugin --profile <name> add <this-package>` selects this bundle, and the
+# row below mounts the plugin. If you prefer a manual install instead, add the
+# same `insert` entry to your profile's cordis.patch.yml and do not select this
+# bundle (otherwise the row is mounted twice).
+- insert:
+    - id: cost-widget
+      name: dsh-cost-widget
+      config: {}

@@ -1,0 +1,12 @@
+# Installed dependencies and harness-local state
+node_modules/
+builder-usage.json
+
+# Written at runtime (prices / opt-in), never commit a personal config
+config.json
+cost-widget.json
+*.tmp
+
+# OS / editor noise
+.DS_Store
+*.log
