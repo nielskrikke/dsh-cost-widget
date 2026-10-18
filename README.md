@@ -18,7 +18,7 @@ A spend / budget widget for the [DeepSeek Harness](https://github.com/deepseek-a
 - A DeepSeek account signed in under **Settings → Account** if you want the live Platform balance. The spend estimate works without it.
 - For the recommended install: `dsh` on your `PATH` and `pnpm` available (the Harness bundles pnpm internally, but the CLI looks for one on `PATH`). If `dsh` reports `pnpm was not found`, install pnpm (`npm install -g pnpm`) or use the manual install below.
 
-Tested with DSH `0.2.0-rc.2` on macOS.
+Tested with DSH 0.2.x (CLI `0.2.0-rc.2`, desktop app `0.2.1-rc.2`) on macOS.
 
 ## Install
 
@@ -71,15 +71,17 @@ The widget reads and writes **`cost-widget.json` in the harness home**:
 | macOS / Linux | `~/.dsh/cost-widget.json` |
 | Windows | `%USERPROFILE%\.dsh\cost-widget.json` |
 
-`$DSH_HOME` is honoured, so a harness home elsewhere uses `$DSH_HOME/cost-widget.json`. One file is shared by every profile (web, desktop, …), which keeps the widget consistent no matter how the harness was launched. The path can be overridden with the `DSH_COST_WIDGET_CONFIG` environment variable, or with `config.file` on the plugin row:
+`$DSH_HOME` is honoured, so a harness home elsewhere uses `$DSH_HOME/cost-widget.json`. One file is shared by every profile (web, desktop, …), which keeps the widget consistent no matter how the harness was launched. The path can be overridden with the `DSH_COST_WIDGET_CONFIG` environment variable, or with `config.file` on the plugin row.
+
+For a **bundle install**, override the row from the bundle (do not insert a second one):
 
 ```yaml
-- insert:
-    - id: cost-widget
-      name: dsh-cost-widget
-      config:
-        file: /absolute/path/to/cost-widget.json
+- id: cost-widget
+  config:
+    file: /absolute/path/to/cost-widget.json
 ```
+
+For a **manual install**, put the same key in the `insert` entry's `config`.
 
 A config written by an older install next to the package (`.../dsh-cost-widget/config.json`) is read once and migrated to the harness-home path. The config file is created on the first save from the widget; `config.example.json` shows the full shape:
 
